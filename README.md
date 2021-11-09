@@ -15,4 +15,3 @@ Files can be found in the links below:
   + [Problem Set 2.py](./Problem/ Set/ 2.py)
   + [roblem Set 2.ipynb](./Problem/ Set/ 2.ipynb)
 
-
