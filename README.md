@@ -12,6 +12,6 @@ These files contain code to download, clean and save data from the NHANES survey
 
 Files can be found in the links below:
   
-  + [Problem Set 2.py](./Problem/ Set/ 2.py)
-  + [roblem Set 2.ipynb](./Problem/ Set/ 2.ipynb)
+  + [Problem Set 2.py](./Problem_Set_2_Q3.py)
+  + [Problem Set 2.ipynb](./Problem_Set_2_Q3.ipynb)
 
