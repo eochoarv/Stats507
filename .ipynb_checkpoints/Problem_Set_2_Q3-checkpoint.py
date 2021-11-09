@@ -83,11 +83,11 @@ list_cohort_demo = ['2011-2012',
                     '2015-2016',
                     '2017-2018']
 
-col_ids_demo = ['SEQN', 'RIDAGEYR', 'RIDRETH3', 'DMDEDUC2', 'DMDMARTL', 
+col_ids_demo = ['SEQN', 'RIDAGEYR', 'RIAGENDR', 'RIDRETH3', 'DMDEDUC2', 'DMDMARTL', 
             'RIDSTATR', 'SDMVPSU', 'SDMVSTRA', 'WTMEC2YR', 'WTINT2YR', 
             'cohort']
 
-col_names_demo =['unique_ids', 'age', 'race_ethnicity', 
+col_names_demo =['unique_ids', 'age', 'gender', 'race_ethnicity', 
                  'education', 'marital_status', 
                  'interview_status', 
                  'masked_variance_pseudo_PSU',
@@ -96,6 +96,9 @@ col_names_demo =['unique_ids', 'age', 'race_ethnicity',
                  'interview_weight', 'cohort']
 
 col_dict_demo = {i: n for i,n in zip(col_ids_demo, col_names_demo)}
+
+value_des_gen = {1: 'Male',
+                 2: 'Female'}
 
 value_des_race = {1: 'Mexican American',
                   2: 'Other Hispanic',
@@ -140,6 +143,9 @@ df_demo = df_demo.reset_index(drop=True)
 
 df_demo.loc[:,'unique_ids':'age'] = df_demo.loc[:,'unique_ids':
                                                 'age'].astype('int')
+
+df_demo['gender'] = pd.Categorical(df_demo['gender'].
+                                   replace(value_des_gen))
 
 df_demo['education'] = pd.Categorical(df_demo['education'].
                                       replace(value_des_edu))
